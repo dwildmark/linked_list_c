@@ -33,6 +33,9 @@ void list_delete(struct list *list)
         
         target = next_target;
     }
+    
+    list->head = NULL;
+    list->tail = NULL;
 }
 
 void list_prepend(struct list *list, void *data)
@@ -92,3 +95,25 @@ void list_head(struct list *list, void *data)
     data = malloc(list->elem_size);
     memcpy(data, list->head->data, list->elem_size);
 }
+
+void list_tail(struct list *list, void *data)
+{
+    data = malloc(list->elem_size);
+    memcpy(data, list->tail->data, list->elem_size);
+}
+
+void list_dequeue_head(struct list *list, void *data)
+{
+    struct node *temp;
+    
+    data = malloc(list->elem_size);
+    memcpy(data, list->head->data, list->elem_size);
+    temp = list->head;
+    list->head = temp->next;
+    if (NULL != list->free) {
+        list->free(temp);
+    } else {
+        free(temp);
+    }
+}
+

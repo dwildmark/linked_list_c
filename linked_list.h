@@ -26,6 +26,5 @@ void list_head(struct list *list, void *data);
 void list_tail(struct list *list, void *data);
 
 void list_dequeue_head(struct list *list, void *data);
-void list_dequeue_tail(struct list *list, void *data);
 
 #endif /* LINKED_LIST_H */
