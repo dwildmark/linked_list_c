@@ -98,6 +98,8 @@ static void size_int_list(void)
     TEST_ASSERT_EQUAL_INT(100, list_size(&l));
 }
 
+
+
 int main(int argc, const char *argv[])
 {
     UNITY_BEGIN();
