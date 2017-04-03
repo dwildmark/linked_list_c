@@ -115,5 +115,6 @@ void list_dequeue_head(struct list *list, void *data)
     } else {
         free(temp);
     }
+    list->list_size--;
 }
 
