@@ -99,7 +99,6 @@ static void size_int_list(void)
 }
 
 
-
 int main(int argc, const char *argv[])
 {
     UNITY_BEGIN();
