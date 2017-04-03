@@ -2,8 +2,8 @@
 #include <stdint.h>
 #include <string.h>
 
-#include "../include/unity.h"
-#include "../include/linked_list.h"
+#include "unity.h"
+#include "linked_list.h"
 
 static void create_int_list(void)
 {
